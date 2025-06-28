@@ -84,7 +84,17 @@ main {
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 6rem;
+}
+
+.hero,
+.skills,
+.experience,
+.projects,
+.contact {
+  max-width: 60rem;
+  width: 100%;
 }
 
 .hero {
@@ -93,9 +103,6 @@ main {
   align-items: flex-start;
   gap: 2rem;
   padding: 6rem 2rem;
-
-  max-width: 60rem;
-  margin: 0 auto;
 }
 
 .hero-intro {
@@ -140,17 +147,15 @@ main {
   color: var(--color-bg);
 }
 
-.experience {
-  padding: 6rem 2rem;
-  max-width: 60rem;
-  margin: 0 auto;
-}
-
-.experience-heading {
+.section-heading {
   font-size: 2rem;
   margin-bottom: 2rem;
   font-weight: 700;
   color: #fff;
+}
+
+.experience {
+  padding: 6rem 2rem;
 }
 
 .experience-item {
@@ -188,5 +193,43 @@ main {
 .experience-description {
   font-size: 1rem;
   color: var(--color-text);
+  line-height: 1.6;
+}
+
+.skills {
+  padding: 4rem 2rem;
+}
+
+.skills-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skills-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skills-group-title {
+  font-weight: 600;
+  color: var(--color-accent);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skills-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-group li {
+  font-size: 1rem;
+  font-weight: 500;
   line-height: 1.6;
 }
