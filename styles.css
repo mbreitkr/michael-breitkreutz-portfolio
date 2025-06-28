@@ -233,3 +233,73 @@ main {
   font-weight: 500;
   line-height: 1.6;
 }
+
+.projects {
+  padding: 4rem 2rem;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project-item {
+  background-color: #0f253b;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: var(--color-text-emphasis);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.project-description {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Project links styles */
+.project-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+.project-links a:link,
+.project-links a:visited {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-links a:hover,
+.project-links a:active {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-tags li {
+  background-color: #1c2e45;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
