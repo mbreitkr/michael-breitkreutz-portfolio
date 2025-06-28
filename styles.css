@@ -9,7 +9,8 @@ FONT SIZE SYSTEM (px)
 /* CSS variables */
 :root {
   --color-bg: #0a192f;
-  --color-text: #adb5bd;
+  --color-text-main: #adb5bd;
+  --color-text-emphasis: #fff;
   --color-accent: #22b8cf;
 }
 
@@ -23,7 +24,7 @@ FONT SIZE SYSTEM (px)
 body {
   font-family: "Inter", "Helvetica Neue", sans-serif;
   background-color: var(--color-bg);
-  color: var(--color-text);
+  color: var(--color-text-main);
   line-height: 1;
 }
 
@@ -67,7 +68,7 @@ header nav {
 
 .nav-list .nav-link:link,
 .nav-list .nav-link:visited {
-  color: var(--color-text);
+  color: var(--color-text-main);
   font-weight: 500;
   transition: color 0.2s ease;
 }
@@ -107,7 +108,7 @@ main {
 .hero-name {
   font-size: 3.5rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-text-emphasis);
   line-height: 1.1;
 }
 
@@ -137,4 +138,55 @@ main {
 .hero-cta:active {
   background-color: var(--color-accent);
   color: var(--color-bg);
+}
+
+.experience {
+  padding: 6rem 2rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.experience-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.experience-item {
+  margin-bottom: 3rem;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.experience-role {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.experience-company {
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.experience-dates {
+  font-size: 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.experience-description {
+  font-size: 1rem;
+  color: var(--color-text);
+  line-height: 1.6;
 }
