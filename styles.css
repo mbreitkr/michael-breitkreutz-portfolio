@@ -45,7 +45,7 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1200px; /* TODO: Convert to rem? */
   margin: 0 auto;
 }
 
@@ -75,4 +75,66 @@ header nav {
 .nav-list .nav-link:hover,
 .nav-list .nav-link:active {
   color: var(--color-accent);
+}
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 6rem 2rem;
+
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.hero-intro {
+  font-size: 1rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.hero-name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.hero-tagline {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  max-width: 40rem;
+  line-height: 1.6;
+}
+
+.hero-cta:link,
+.hero-cta:visited {
+  margin-top: 2rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.hero-cta:hover,
+.hero-cta:active {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
 }
