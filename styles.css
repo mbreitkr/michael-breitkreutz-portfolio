@@ -105,6 +105,70 @@ main {
   padding: 6rem 2rem;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.hero-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.hero-socials a {
+  display: inline-flex;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-text-main);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.hero-socials a:hover {
+  color: var(--color-accent);
+}
+
+.hero-socials svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.hero-button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.hero-button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.hero-button .text {
+  display: inline;
+}
+
 .hero-intro {
   font-size: 1rem;
   color: var(--color-accent);
@@ -128,23 +192,6 @@ main {
   font-size: 1.125rem;
   max-width: 40rem;
   line-height: 1.6;
-}
-
-.hero-cta:link,
-.hero-cta:visited {
-  margin-top: 2rem;
-  font-weight: 600;
-  color: var(--color-accent);
-  border: 1px solid var(--color-accent);
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-
-.hero-cta:hover,
-.hero-cta:active {
-  background-color: var(--color-accent);
-  color: var(--color-bg);
 }
 
 .section-heading {
@@ -262,7 +309,6 @@ main {
   margin-bottom: 1.5rem;
 }
 
-/* Project links styles */
 .project-links {
   display: flex;
   gap: 1rem;
@@ -302,4 +348,39 @@ main {
   padding: 0.25rem 0.75rem;
   border-radius: 4px;
   font-weight: 500;
+}
+
+.contact {
+  padding: 4rem 2rem;
+  text-align: left;
+}
+
+.contact-text {
+  font-size: 1.125rem;
+  max-width: 40rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contact-button:link,
+.contact-button:visited {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.contact-button:hover,
+.contact-button:active {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.footer {
+  padding: 2rem;
+  font-size: 0.875rem;
+  text-align: center;
 }
