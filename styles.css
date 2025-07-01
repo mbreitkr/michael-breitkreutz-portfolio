@@ -1,9 +1,13 @@
 /*
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+SPACING SYSTEM (rem)
+.125 / .25 / .5 / .75 / 1 / 1.5 / 2 / 3 / 4 / 5 / 6 / 8
 
 FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+FONT SIZE SYSTEM (rem)
+.625 / .75 / .875 / 1 / 1.125 / 1.25 / 1.5 / 1.875 / 2.25 / 2.75 / 3.25 / 3.875 / 4.625 / 5.375 / 6.125
 */
 
 /* CSS variables */
@@ -69,7 +73,6 @@ header nav {
 .nav-list .nav-link:link,
 .nav-list .nav-link:visited {
   color: var(--color-text-main);
-  font-weight: 500;
   transition: color 0.2s ease;
 }
 
@@ -79,9 +82,10 @@ header nav {
 }
 
 main {
-  max-width: 60rem;
+  max-width: 960px;
+  width: 100%;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -146,7 +150,6 @@ main {
   align-items: center;
   gap: 0.5rem;
   font-weight: 600;
-  font-size: 1rem;
   color: var(--color-accent);
   border: 1px solid var(--color-accent);
   padding: 0.75rem 1.5rem;
@@ -170,32 +173,33 @@ main {
 }
 
 .hero-intro {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: var(--color-accent);
-  font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 0.2px;
 }
 
 .hero-name {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: 3.875rem;
+  font-weight: 500;
   color: var(--color-text-emphasis);
-  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
 .hero-tagline {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2.75rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
 }
 
 .hero-description {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   max-width: 40rem;
   line-height: 1.6;
 }
 
 .section-heading {
-  font-size: 2rem;
+  font-size: 2.25rem;
   margin-bottom: 2rem;
   font-weight: 700;
   color: #fff;
@@ -215,13 +219,13 @@ main {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .experience-role {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-text-emphasis);
   margin: 0;
   line-height: 1.3;
 }
@@ -232,14 +236,20 @@ main {
 }
 
 .experience-dates {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
   white-space: nowrap;
 }
 
-.experience-description {
+.experience-tech {
   font-size: 1rem;
-  color: var(--color-text);
+  opacity: 0.75;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.experience-description {
+  font-size: 1.25rem;
   line-height: 1.6;
 }
 
@@ -261,12 +271,13 @@ main {
 }
 
 .skills-group-title {
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-accent);
-  font-size: 1rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  letter-spacing: -0.5px;
 }
 
 .skills-group ul {
@@ -276,7 +287,7 @@ main {
 }
 
 .skills-group li {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.6;
 }
@@ -305,6 +316,7 @@ main {
 }
 
 .project-description {
+  font-size: 1.25rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -356,7 +368,7 @@ main {
 }
 
 .contact-text {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   max-width: 40rem;
   margin-bottom: 2rem;
   line-height: 1.6;
