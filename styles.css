@@ -16,6 +16,8 @@ FONT SIZE SYSTEM (rem)
   --color-text-main: #adb5bd;
   --color-text-emphasis: #fff;
   --color-accent: #22b8cf;
+
+  --header-height: 4.5rem;
 }
 
 /* Global resets */
@@ -23,6 +25,10 @@ FONT SIZE SYSTEM (rem)
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -42,26 +48,31 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 1rem 2rem;
+  padding: 0 3rem;
+  height: var(--header-height);
   border-bottom: 1px solid #343a40;
 }
 
 header nav {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px; /* TODO: Convert to rem? */
   margin: 0 auto;
 }
 
-.logo .nav-link:link,
-.logo .nav-link:visited,
-.logo .nav-link:hover,
-.logo .nav-link:active {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  letter-spacing: 1px;
+.logo-link.nav-link:link,
+.logo-link.nav-link:visited,
+.logo-link.nav-link:hover,
+.logo-link.nav-link:active {
+  height: 3rem;
+  width: 3rem;
+}
+
+.logo-link img {
+  height: 3rem;
+  width: auto;
+  display: block;
 }
 
 .nav-list {
@@ -81,32 +92,80 @@ header nav {
   color: var(--color-accent);
 }
 
-main {
-  max-width: 960px;
+.page-content {
+  max-width: 65rem;
   width: 100%;
   margin: 0 auto;
-  padding: 0 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6rem;
-}
-
-.hero,
-.skills,
-.experience,
-.projects,
-.contact {
-  max-width: 60rem;
-  width: 100%;
+  padding: 0 2rem;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
+  min-height: calc(100vh - var(--header-height));
+}
+
+.hero-intro {
+  font-size: 1.25rem;
+  color: var(--color-accent);
+  letter-spacing: 0.2px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-name {
+  font-size: 4.25rem;
+  font-weight: 500;
+  color: var(--color-text-emphasis);
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+}
+
+/* TODO: Clean up tagline wording/width */
+.hero-tagline {
+  font-size: 3.25rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin-bottom: 1.5rem;
+  max-width: 42rem;
+  width: 100%;
+}
+
+.hero-socials {
+  display: flex;
   gap: 2rem;
-  padding: 6rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-social-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-emphasis);
+  transition: color 0.2s ease;
+}
+
+.hero-social-button:hover {
+  color: var(--color-accent);
+}
+
+.hero-social-button i {
+  font-size: 1.5rem;
+}
+
+.hero-social-button span {
+  text-decoration: underline;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  max-width: 40rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 .hero-actions {
@@ -115,34 +174,6 @@ main {
   align-items: center;
   justify-content: flex-start;
   gap: 1rem 1.5rem;
-  margin-top: 2rem;
-}
-
-.hero-socials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.hero-socials a {
-  display: inline-flex;
-  font-weight: 500;
-  font-size: 0.875rem;
-  color: var(--color-text-main);
-  text-decoration: underline;
-  transition: color 0.2s ease;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.hero-socials a:hover {
-  color: var(--color-accent);
-}
-
-.hero-socials svg {
-  width: 1rem;
-  height: 1rem;
 }
 
 .hero-button {
@@ -163,39 +194,22 @@ main {
   color: var(--color-bg);
 }
 
-.hero-button svg {
-  width: 1rem;
-  height: 1rem;
-}
-
 .hero-button .text {
   display: inline;
 }
 
-.hero-intro {
-  font-size: 1.25rem;
-  color: var(--color-accent);
-  letter-spacing: 0.2px;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
-.hero-name {
-  font-size: 3.875rem;
-  font-weight: 500;
-  color: var(--color-text-emphasis);
-  letter-spacing: -1px;
-}
-
-.hero-tagline {
-  font-size: 2.75rem;
-  font-weight: 500;
-  line-height: 1.1;
-  letter-spacing: -0.5px;
-}
-
-.hero-description {
-  font-size: 1.25rem;
-  max-width: 40rem;
-  line-height: 1.6;
+.about,
+.experience,
+.projects,
+.contact {
+  padding-top: calc(4rem + var(--header-height));
 }
 
 .section-heading {
@@ -205,12 +219,37 @@ main {
   color: #fff;
 }
 
-.experience {
-  padding: 6rem 2rem;
+.about-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
 }
 
-.experience-item {
-  margin-bottom: 3rem;
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-text p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.about-img {
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid #343a40;
+  border-radius: 4px;
+  margin-top: 0.4rem;
+}
+
+.experience-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 .experience-header {
@@ -219,7 +258,7 @@ main {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .experience-role {
@@ -245,16 +284,12 @@ main {
   font-size: 1rem;
   opacity: 0.75;
   font-style: italic;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .experience-description {
   font-size: 1.25rem;
   line-height: 1.6;
-}
-
-.skills {
-  padding: 4rem 2rem;
 }
 
 .skills-groups {
@@ -290,10 +325,6 @@ main {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.6;
-}
-
-.projects {
-  padding: 4rem 2rem;
 }
 
 .project-list {
@@ -363,8 +394,13 @@ main {
 }
 
 .contact {
-  padding: 4rem 2rem;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: calc(4rem + var(--header-height));
+  min-height: 48rem;
+  height: 100%;
 }
 
 .contact-text {
