@@ -43,6 +43,23 @@ a {
 }
 
 /* Main styles */
+/* TODO: Change button styling */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: calc(var(--header-height) + 1rem);
+  background: var(--color-accent);
+  color: var(--color-text-emphasis);
+  padding: 0.5rem 1rem;
+  z-index: 10000;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+.skip-link:focus {
+  left: 10px;
+}
+
 header {
   background-color: var(--color-bg);
   position: sticky;
@@ -79,6 +96,7 @@ header nav {
   display: flex;
   gap: 2rem;
   list-style: none;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .nav-list .nav-link:link,
@@ -280,11 +298,35 @@ main {
   white-space: nowrap;
 }
 
-.experience-tech {
+/* TODO: Remove after confirming this tech list works well on all screen sizes */
+/* .experience-tech {
   font-size: 1rem;
   opacity: 0.75;
   font-style: italic;
   margin-bottom: 0.75rem;
+} */
+
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  list-style: none;
+  font-size: 1rem;
+  opacity: 0.75;
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.experience-tech::before {
+  content: "Tech:";
+}
+
+.experience-tech li::after {
+  content: ",";
+}
+
+.experience-tech li:last-child::after {
+  content: "";
 }
 
 .experience-description {
@@ -479,27 +521,23 @@ main {
     cursor: pointer;
   }
 
+  /* TODO: Clean up nav list open/close behaviour with padding */
   .nav-list {
-    transform: translateY(-20px);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    flex-direction: column;
-    background-color: var(--color-bg);
     position: absolute;
     top: var(--header-height);
-    right: 1rem;
-    width: 200px;
-    border: 1px solid #343a40;
-    border-radius: 4px;
-    padding: 1rem;
-    gap: 1rem;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background: var(--color-bg);
+    padding: 0 1.5rem;
   }
-
-  .nav-list-visible {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
+  .nav-list--open {
+    padding: 1.5rem;
+    max-height: 400px; /* enough to show all links */
+    border-bottom: 1px solid #343a40;
   }
 
   header nav {

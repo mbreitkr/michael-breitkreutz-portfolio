@@ -16,17 +16,24 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
-      <nav>
+      <nav role="navigation" aria-label="Main navigation">
         <a href="#" class="nav-link logo-link">
           <img src="assets/logo.png" alt="Michael Breitkreutz logo" />
         </a>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <i class="ph ph-list"></i>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-controls="main-nav-list"
+          aria-expanded="false"
+        >
+          <i class="ph ph-list" aria-hidden="true"></i>
         </button>
-        <ul class="nav-list">
+        <ul class="nav-list" id="main-nav-list">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -35,9 +42,9 @@
       </nav>
     </header>
     <div class="page-content">
-      <section class="hero">
+      <section class="hero" aria-labelledby="hero-heading">
         <p class="hero-intro">Hey there! My name is</p>
-        <h1 class="hero-name">Michael Breitkreutz.</h1>
+        <h1 class="hero-name" id="hero-heading">Michael Breitkreutz.</h1>
         <h2 class="hero-tagline">
           I build beautiful websites that feel great to use.
         </h2>
@@ -48,7 +55,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="ph ph-linkedin-logo"></i>
+            <i class="ph ph-linkedin-logo" aria-hidden="true"></i>
             <span>LinkedIn</span>
           </a>
           <a
@@ -57,7 +64,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="ph ph-github-logo"></i>
+            <i class="ph ph-github-logo" aria-hidden="true"></i>
             <span>GitHub</span>
           </a>
         </div>
@@ -77,9 +84,9 @@
           </a>
         </div>
       </section>
-      <main>
-        <section class="about" id="about">
-          <h2 class="section-heading">About Me</h2>
+      <main id="main-content" tabindex="-1">
+        <section class="about" id="about" aria-labelledby="about-heading">
+          <h2 class="section-heading" id="about-heading">About Me</h2>
           <div class="about-body">
             <div class="about-text">
               <p>
@@ -101,11 +108,19 @@
                 quest to see the world.
               </p>
             </div>
-            <img src="/assets/profile-headshot.jpg" class="about-img" />
+            <img
+              src="/assets/profile-headshot.jpg"
+              class="about-img"
+              alt="Photo of Michael Breitkreutz"
+            />
           </div>
         </section>
-        <section class="experience" id="experience">
-          <h2 class="section-heading">Experience</h2>
+        <section
+          class="experience"
+          id="experience"
+          aria-labelledby="experience-heading"
+        >
+          <h2 class="section-heading" id="experience-heading">Experience</h2>
           <div class="experience-items">
             <div class="experience-item">
               <div class="experience-header">
@@ -113,11 +128,17 @@
                   React Developer
                   <span class="experience-company">@ Carbeeza</span>
                 </h3>
-                <p class="experience-dates">2024 - Present</p>
+                <p class="experience-dates">
+                  <time datetime="2024">2024</time> - Present
+                </p>
               </div>
-              <p class="experience-tech">
-                Tech: TypeScript, React, Tailwind, Vitest/Jest, Testim
-              </p>
+              <ul class="experience-tech">
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Tailwind</li>
+                <li>Vitest/Jest</li>
+                <li>Testim</li>
+              </ul>
               <p class="experience-description">
                 Lead development and performance optimization across 4 React
                 apps using TypeScript and Tailwind. Introduced CI and automated
@@ -130,11 +151,18 @@
                   Angular Developer
                   <span class="experience-company">@ Carbeeza</span>
                 </h3>
-                <p class="experience-dates">2021 - 2023</p>
+                <p class="experience-dates">
+                  <time datetime="2021">2021</time> -
+                  <time datetime="2023">2023</time>
+                </p>
               </div>
-              <p class="experience-tech">
-                Tech: Angular 19, TypeScript, SCSS, Jasmine/Karma, BrowserStack
-              </p>
+              <ul class="experience-tech">
+                <li>TypeScript</li>
+                <li>Angular 19</li>
+                <li>SCSS</li>
+                <li>Jasmine/Karma</li>
+                <li>BrowserStack</li>
+              </ul>
               <p class="experience-description">
                 Developed 50+ reusable Angular components and maintained
                 responsive, cross-platform apps in an 11-person product team.
@@ -147,11 +175,17 @@
                   Python Developer
                   <span class="experience-company">@ Carbeeza</span>
                 </h3>
-                <p class="experience-dates">2018 - 2021</p>
+                <p class="experience-dates">
+                  <time datetime="2018">2018</time> -
+                  <time datetime="2021">2021</time>
+                </p>
               </div>
-              <p class="experience-tech">
-                Tech: Python, Selenium, Google Cloud Platform, REST APIs
-              </p>
+              <ul class="experience-tech">
+                <li>Python</li>
+                <li>Selenium</li>
+                <li>Google Cloud Platform</li>
+                <li>Rest APIs</li>
+              </ul>
               <p class="experience-description">
                 Built and maintained a daily ETL pipeline and web scraper for
                 20k+ inventory records. Integrated 10+ third-party APIs and
@@ -160,9 +194,12 @@
             </div>
           </div>
         </section>
-        <section class="projects" id="projects">
-          <h2 class="section-heading">Projects</h2>
-
+        <section
+          class="projects"
+          id="projects"
+          aria-labelledby="projects-heading"
+        >
+          <h2 class="section-heading" id="projects-heading">Projects</h2>
           <div class="project-list">
             <div class="project-item">
               <h3 class="project-title">Bike Index Search App</h3>
@@ -186,7 +223,6 @@
                 <li>TypeScript</li>
               </ul>
             </div>
-
             <div class="project-item">
               <h3 class="project-title">Destiny Item Manager (Open Source)</h3>
               <p class="project-description">
@@ -221,8 +257,8 @@
             </div>
           </div>
         </section>
-        <section class="contact" id="contact">
-          <h2 class="section-heading">Get in Touch</h2>
+        <section class="contact" id="contact" aria-labelledby="contact-heading">
+          <h2 class="section-heading" id="contact-heading">Get in Touch</h2>
           <p class="contact-text">
             I'm always open to new opportunities, interesting projects, or just
             connecting with others in the tech community. If you'd like to chat,
@@ -234,9 +270,8 @@
         </section>
       </main>
     </div>
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <p class="footer-text">&copy; 2025 Michael Breitkreutz</p>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>

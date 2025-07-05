@@ -1,14 +1,17 @@
 const navToggle = document.querySelector(".nav-toggle");
-const navList = document.querySelector(".nav-list");
-const navLinks = document.querySelectorAll(".nav-link");
+const navList = document.getElementById("main-nav-list");
 
-navToggle.addEventListener("click", () => {
-  navList.classList.toggle("nav-list-visible");
-});
-
-// Close the mobile nav when any link is clicked
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navList.classList.remove("nav-list-visible");
+if (navToggle && navList) {
+  navToggle.addEventListener("click", function () {
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", String(!expanded));
+    navList.classList.toggle("nav-list--open");
   });
-});
+
+  navList.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navToggle.setAttribute("aria-expanded", "false");
+      navList.classList.remove("nav-list--open");
+    });
+  });
+}
