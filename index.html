@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- 1. Charset & Viewport -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 2. Title & Description -->
     <title>Michael Breitkreutz - Frontend Developer Portfolio</title>
     <meta
       name="description"
@@ -10,6 +13,7 @@
     />
     <meta name="theme-color" content="#0a192f" />
 
+    <!-- 3. Open Graph -->
     <meta
       property="og:title"
       content="Michael Breitkreutz - Frontend Developer Portfolio"
@@ -24,6 +28,7 @@
       content="https://mbreitkreutz.com/michael-breitkreutz-preview.png"
     />
 
+    <!-- 4. Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -42,19 +47,48 @@
       content="Portfolio preview image showing Michael's name and title"
     />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <!-- 5. Favicon & Manifest -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- 6. Stylesheets (local first, then external) -->
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- 7. Fonts: Preconnect, Preload, Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- 8. AOS CSS  -->
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- 9. Noscript fallback for fonts and AOS -->
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet"
+      />
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    </noscript>
+
+    <!-- 10. Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -70,10 +104,14 @@
         ]
       }
     </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- 11. Scripts (defer/async) -->
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
+    <!-- For keyboard nav -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <nav role="navigation" aria-label="Main navigation">

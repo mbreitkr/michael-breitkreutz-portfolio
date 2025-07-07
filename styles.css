@@ -62,6 +62,7 @@ a {
   font-weight: bold;
   transition: all 0.2s;
 }
+
 .skip-link:focus {
   left: 10px;
 }

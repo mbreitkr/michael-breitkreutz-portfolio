@@ -2,8 +2,7 @@
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
 }
-
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     duration: 800,
     once: true,
