@@ -3,232 +3,329 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Michael Breitkreutz - Frontend Developer</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Michael Breitkreutz - Frontend Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Frontend developer experienced in building high-quality React and Angular applications. View projects, experience, and resume."
+    />
+    <meta name="theme-color" content="#0a192f" />
+
+    <meta
+      property="og:title"
+      content="Michael Breitkreutz - Frontend Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Frontend developer experienced in building high-quality React and Angular applications. View projects, experience, and resume."
+    />
+    <meta property="og:url" content="https://mbreitkreutz.com/" />
+    <meta
+      property="og:image"
+      content="https://mbreitkreutz.com/michael-breitkreutz-preview.png"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Michael Breitkreutz - Frontend Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Frontend developer experienced in building high-quality React and Angular applications. View projects, experience, and resume."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mbreitkreutz.com/michael-breitkreutz-preview.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Portfolio preview image showing Michael's name and title"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Michael Breitkreutz",
+        "url": "https://mbreitkreutz.com",
+        "image": "https://mbreitkreutz.com/assets/profile-headshot.jpg",
+        "jobTitle": "Frontend Developer",
+        "description": "Frontend developer specializing in React and Angular, delivering scalable, testable, and user-friendly web applications.",
+        "sameAs": [
+          "https://www.linkedin.com/in/michaelbreitkreutz/",
+          "https://github.com/mbreitkr"
+        ]
+      }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
-      <nav>
-        <div class="logo">
-          <a href="/" class="nav-link">MB</a>
-        </div>
-        <ul class="nav-list">
+      <nav role="navigation" aria-label="Main navigation">
+        <a href="#" class="nav-link logo-link">
+          <img src="assets/logo.png" alt="Michael Breitkreutz logo" />
+        </a>
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-controls="main-nav-list"
+          aria-expanded="false"
+        >
+          <i class="ph ph-list" aria-hidden="true"></i>
+        </button>
+        <ul class="nav-list" id="main-nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <main>
-      <section class="hero">
+    <div class="page-content">
+      <section class="hero" aria-labelledby="hero-heading" data-aos="fade-up">
         <p class="hero-intro">Hey there! My name is</p>
-        <h1 class="hero-name">Michael Breitkreutz.</h1>
+        <h1 class="hero-name" id="hero-heading">Michael Breitkreutz.</h1>
         <h2 class="hero-tagline">
-          I build beautiful, user-focused web experiences.
+          I build beautiful websites that feel great to use.
         </h2>
-        <div class="hero-socials">
-          <a
-            href="https://github.com/mbreitkr"
-            class="hero-social-button"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="ph ph-github-logo"></i>
-            GitHub
-          </a>
+        <div class="hero-socials" data-aos="fade-up" data-aos-delay="200">
           <a
             href="https://www.linkedin.com/in/michaelbreitkreutz/"
             class="hero-social-button"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="ph ph-linkedin-logo"></i>
-            LinkedIn
+            <i class="ph ph-linkedin-logo" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="https://github.com/mbreitkr"
+            class="hero-social-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="ph ph-github-logo" aria-hidden="true"></i>
+            <span>GitHub</span>
           </a>
         </div>
-        <p class="hero-description">
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
           I'm a frontend developer specializing in React and Angular, focused on
           delivering accessible, testable, and scalable applications.
         </p>
-        <div class="hero-actions">
-          <a href="#experience" class="hero-button hero-button--primary">
-            View my work
+        <div class="hero-cta-buttons" data-aos="fade-up" data-aos-delay="400">
+          <a href="#contact" class="hero-button">Get in touch</a>
+          <a
+            href="Michael-Breitkreutz-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hero-button"
+          >
+            View resume
           </a>
         </div>
       </section>
-      <section class="experience" id="experience">
-        <h2 class="section-heading">Experience</h2>
-        <div class="experience-item">
-          <div class="experience-header">
-            <h3 class="experience-role">
-              React Developer <span class="experience-company">@ Carbeeza</span>
-            </h3>
-            <p class="experience-dates">2024 - Present</p>
-          </div>
-          <p class="experience-description">
-            Lead development and performance optimization across 4 React apps
-            using TypeScript and Tailwind. Introduced CI and automated testing
-            practices that reduced rejected PRs by 25%.
-          </p>
-        </div>
-        <div class="experience-item">
-          <div class="experience-header">
-            <h3 class="experience-role">
-              Angular Developer
-              <span class="experience-company">@ Carbeeza</span>
-            </h3>
-            <p class="experience-dates">2021 - 2023</p>
-          </div>
-          <p class="experience-description">
-            Developed 50+ reusable Angular components and maintained responsive,
-            cross-platform apps in an 11-person product team. Conducted async
-            code reviews and cross-browser testing.
-          </p>
-        </div>
-        <div class="experience-item">
-          <div class="experience-header">
-            <h3 class="experience-role">
-              Python Developer
-              <span class="experience-company">@ Carbeeza</span>
-            </h3>
-            <p class="experience-dates">2018 - 2021</p>
-          </div>
-          <p class="experience-description">
-            Built and maintained a daily ETL pipeline and web scraper for 20k+
-            inventory records. Integrated 10+ third-party APIs and mentored
-            junior devs on data tools and architecture.
-          </p>
-        </div>
-      </section>
-      <section class="skills" id="skills">
-        <h2 class="section-heading">Skills</h2>
-
-        <div class="skills-groups">
-          <div class="skills-group">
-            <h3 class="skills-group-title">💻 Languages & Frameworks</h3>
-            <ul>
-              <li>JavaScript / TypeScript</li>
-              <li>React</li>
-              <li>Angular 19</li>
-              <li>HTML</li>
-              <li>SCSS</li>
-              <li>Tailwind CSS</li>
-            </ul>
-          </div>
-
-          <div class="skills-group">
-            <h3 class="skills-group-title">🧪 Testing</h3>
-            <ul>
-              <li>Vitest</li>
-              <li>Jest</li>
-              <li>Jasmine</li>
-              <li>React Testing Library</li>
-              <li>Cross-Browser Testing</li>
-            </ul>
-          </div>
-
-          <div class="skills-group">
-            <h3 class="skills-group-title">🛠️ Tooling & Workflow</h3>
-            <ul>
-              <li>ESLint</li>
-              <li>Husky</li>
-              <li>Git</li>
-              <li>GitHub Actions</li>
-            </ul>
-          </div>
-
-          <div class="skills-group">
-            <h3 class="skills-group-title">🎯 Frontend Specialties</h3>
-            <ul>
-              <li>Responsive Design</li>
-              <li>Performance Optimization</li>
-              <li>Accessibility</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section class="projects" id="projects">
-        <h2 class="section-heading">Projects</h2>
-
-        <div class="project-list">
-          <div class="project-item">
-            <h3 class="project-title">Bike Index Search App</h3>
-            <p class="project-description">
-              A production-quality Angular app using the Bike Index API to
-              search and display bikes. Built with Angular 19, SCSS, and RxJS.
-              Designed with clean UX, modular architecture, and performance in
-              mind.
-            </p>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Live Site
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <main id="main-content" tabindex="-1">
+        <section class="about" id="about" aria-labelledby="about-heading">
+          <h2 class="section-heading" id="about-heading">About Me</h2>
+          <div class="about-body">
+            <div class="about-text">
+              <p>
+                With a background in Electrical Engineering, my career has taken
+                me from satellite communication system design, to IT
+                Engineering, and now to web development, where I've found a love
+                for building websites that are as intuitive as they are
+                beautiful.
+              </p>
+              <p>
+                These days, I focus on building fast, accessible, and thoroughly
+                tested frontends with React and Angular. I especially enjoy
+                working on products that make a tangible, positive difference in
+                people's lives.
+              </p>
+              <p>
+                Outside of work, you'll usually find me jogging the river
+                valley, playing some Destiny, or tackling a new country on my
+                quest to see the world.
+              </p>
             </div>
-            <ul class="project-tags">
-              <li>Angular 19</li>
-              <li>RxJS</li>
-              <li>SCSS</li>
-              <li>Responsive Design</li>
-              <li>TypeScript</li>
-            </ul>
+            <img
+              src="/assets/profile-headshot.jpg"
+              class="about-img"
+              alt="Photo of Michael Breitkreutz"
+            />
           </div>
-
-          <div class="project-item">
-            <h3 class="project-title">Destiny Item Manager (Open Source)</h3>
-            <p class="project-description">
-              Contributor to the popular Destiny Item Manager web app, used by
-              thousands of players daily. Worked with a React-based codebase to
-              address community issues, implement UI improvements, and improve
-              test coverage.
-            </p>
-            <div class="project-links">
-              <a
-                href="https://destinyitemmanager.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Live Site
-              </a>
-              <a
-                href="https://github.com/DestinyItemManager/DIM"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
+        </section>
+        <section
+          class="experience"
+          id="experience"
+          aria-labelledby="experience-heading"
+        >
+          <h2 class="section-heading" id="experience-heading">Experience</h2>
+          <div class="experience-items">
+            <div class="experience-item">
+              <div class="experience-header">
+                <h3 class="experience-role">
+                  React Developer
+                  <span class="experience-company">@ Carbeeza</span>
+                </h3>
+                <p class="experience-dates">
+                  <time datetime="2024">2024</time> - Present
+                </p>
+              </div>
+              <ul class="experience-tech">
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Tailwind</li>
+                <li>Vitest/Jest</li>
+                <li>Testim</li>
+              </ul>
+              <p class="experience-description">
+                Lead development and performance optimization across 4 React
+                apps using TypeScript and Tailwind. Introduced CI and automated
+                testing practices that reduced rejected PRs by 25%.
+              </p>
             </div>
-            <ul class="project-tags">
-              <li>React</li>
-              <li>TypeScript</li>
-              <li>Open Source</li>
-              <li>Jest</li>
-              <li>GitHub</li>
-            </ul>
+            <div class="experience-item">
+              <div class="experience-header">
+                <h3 class="experience-role">
+                  Angular Developer
+                  <span class="experience-company">@ Carbeeza</span>
+                </h3>
+                <p class="experience-dates">
+                  <time datetime="2021">2021</time> -
+                  <time datetime="2023">2023</time>
+                </p>
+              </div>
+              <ul class="experience-tech">
+                <li>TypeScript</li>
+                <li>Angular 19</li>
+                <li>SCSS</li>
+                <li>Jasmine/Karma</li>
+                <li>BrowserStack</li>
+              </ul>
+              <p class="experience-description">
+                Developed 50+ reusable Angular components and maintained
+                responsive, cross-platform apps in an 11-person product team.
+                Conducted async code reviews and cross-browser testing.
+              </p>
+            </div>
+            <div class="experience-item">
+              <div class="experience-header">
+                <h3 class="experience-role">
+                  Python Developer
+                  <span class="experience-company">@ Carbeeza</span>
+                </h3>
+                <p class="experience-dates">
+                  <time datetime="2018">2018</time> -
+                  <time datetime="2021">2021</time>
+                </p>
+              </div>
+              <ul class="experience-tech">
+                <li>Python</li>
+                <li>Selenium</li>
+                <li>Google Cloud Platform</li>
+                <li>Rest APIs</li>
+              </ul>
+              <p class="experience-description">
+                Built and maintained a daily ETL pipeline and web scraper for
+                20k+ inventory records. Integrated 10+ third-party APIs and
+                mentored junior devs on data tools and architecture.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="contact" id="contact">
-        <h2 class="section-heading">Get in Touch</h2>
-        <p class="contact-text">
-          I'm always open to new opportunities, interesting projects, or just
-          connecting with others in the tech community. If you'd like to chat,
-          feel free to reach out.
-        </p>
-        <a href="mailto:m.breitkre@gmail.com" class="contact-button">
-          Send a Message
-        </a>
-      </section>
-    </main>
-    <footer class="footer">
+        </section>
+        <section
+          class="projects"
+          id="projects"
+          aria-labelledby="projects-heading"
+        >
+          <h2 class="section-heading" id="projects-heading">Projects</h2>
+          <div class="project-list">
+            <div class="project-item">
+              <h3 class="project-title">Bike Index Search App</h3>
+              <p class="project-description">
+                A production-quality Angular app using the Bike Index API to
+                search and display bikes. Built with Angular 19, SCSS, and RxJS.
+                Designed with clean UX, modular architecture, and performance in
+                mind.
+              </p>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  Live Site
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+              <ul class="project-tags">
+                <li>Angular 19</li>
+                <li>RxJS</li>
+                <li>SCSS</li>
+                <li>Responsive Design</li>
+                <li>TypeScript</li>
+              </ul>
+            </div>
+            <!-- <div class="project-item">
+              <h3 class="project-title">Destiny Item Manager (Open Source)</h3>
+              <p class="project-description">
+                Contributor to the popular Destiny Item Manager web app, used by
+                thousands of players daily. Worked with a React-based codebase
+                to address community issues, implement UI improvements, and
+                improve test coverage.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://destinyitemmanager.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Site
+                </a>
+                <a
+                  href="https://github.com/DestinyItemManager/DIM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </div>
+              <ul class="project-tags">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Open Source</li>
+                <li>Jest</li>
+                <li>GitHub</li>
+              </ul>
+            </div> -->
+          </div>
+        </section>
+        <section class="contact" id="contact" aria-labelledby="contact-heading">
+          <h2 class="section-heading" id="contact-heading">Get in Touch</h2>
+          <p class="contact-text">
+            I'm always open to new opportunities, interesting projects, or just
+            connecting with others in the tech community. If you'd like to chat,
+            feel free to reach out.
+          </p>
+          <a href="mailto:m.breitkre@gmail.com" class="contact-button">
+            Send a Message
+          </a>
+        </section>
+      </main>
+    </div>
+    <footer class="footer" role="contentinfo">
       <p class="footer-text">&copy; 2025 Michael Breitkreutz</p>
     </footer>
   </body>
