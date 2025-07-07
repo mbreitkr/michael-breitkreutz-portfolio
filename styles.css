@@ -49,7 +49,7 @@ a {
 }
 
 /* Main styles */
-/* TODO: Change button styling */
+/* TODO: Clean up/consolidate files */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -243,7 +243,7 @@ main {
   font-size: 2.25rem;
   margin-bottom: 2rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-text-emphasis);
 }
 
 .about-body {
