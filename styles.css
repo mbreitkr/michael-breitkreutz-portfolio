@@ -184,8 +184,11 @@ header nav {
   color: var(--color-accent);
 }
 
-.hero-social-button i {
-  font-size: var(--text-size-xl);
+.hero-social-button svg {
+  width: var(--text-size-xl);
+  height: var(--text-size-xl);
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .hero-social-button span {
@@ -517,6 +520,13 @@ main {
     color: var(--color-text-emphasis);
     font-size: 2rem;
     cursor: pointer;
+  }
+
+  .nav-toggle svg {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   /* TODO: Clean up nav list open/close behaviour with padding */
