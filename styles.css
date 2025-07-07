@@ -94,8 +94,9 @@ header nav {
 }
 
 .logo-link img {
-  height: 3rem;
-  width: auto;
+  width: 3rem;
+  height: auto;
+  aspect-ratio: 1 / 1;
   display: block;
 }
 
@@ -270,6 +271,7 @@ main {
 
 .about-img {
   width: 300px;
+  height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border: 1px solid #343a40;
