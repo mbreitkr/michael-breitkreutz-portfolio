@@ -53,6 +53,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script type="application/ld+json">
       {
@@ -69,6 +70,7 @@
         ]
       }
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -95,13 +97,13 @@
       </nav>
     </header>
     <div class="page-content">
-      <section class="hero" aria-labelledby="hero-heading">
+      <section class="hero" aria-labelledby="hero-heading" data-aos="fade-up">
         <p class="hero-intro">Hey there! My name is</p>
         <h1 class="hero-name" id="hero-heading">Michael Breitkreutz.</h1>
         <h2 class="hero-tagline">
           I build beautiful websites that feel great to use.
         </h2>
-        <div class="hero-socials">
+        <div class="hero-socials" data-aos="fade-up" data-aos-delay="200">
           <a
             href="https://www.linkedin.com/in/michaelbreitkreutz/"
             class="hero-social-button"
@@ -121,11 +123,11 @@
             <span>GitHub</span>
           </a>
         </div>
-        <p class="hero-description">
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
           I'm a frontend developer specializing in React and Angular, focused on
           delivering accessible, testable, and scalable applications.
         </p>
-        <div class="hero-cta-buttons">
+        <div class="hero-cta-buttons" data-aos="fade-up" data-aos-delay="400">
           <a href="#contact" class="hero-button">Get in touch</a>
           <a
             href="Michael-Breitkreutz-Resume.pdf"
@@ -138,7 +140,12 @@
         </div>
       </section>
       <main id="main-content" tabindex="-1">
-        <section class="about" id="about" aria-labelledby="about-heading">
+        <section
+          class="about"
+          id="about"
+          aria-labelledby="about-heading"
+          data-aos="fade-up"
+        >
           <h2 class="section-heading" id="about-heading">About Me</h2>
           <div class="about-body">
             <div class="about-text">
@@ -172,6 +179,7 @@
           class="experience"
           id="experience"
           aria-labelledby="experience-heading"
+          data-aos="fade-up"
         >
           <h2 class="section-heading" id="experience-heading">Experience</h2>
           <div class="experience-items">
@@ -251,6 +259,7 @@
           class="projects"
           id="projects"
           aria-labelledby="projects-heading"
+          data-aos="fade-up"
         >
           <h2 class="section-heading" id="projects-heading">Projects</h2>
           <div class="project-list">
@@ -310,7 +319,12 @@
             </div>
           </div>
         </section>
-        <section class="contact" id="contact" aria-labelledby="contact-heading">
+        <section
+          class="contact"
+          id="contact"
+          aria-labelledby="contact-heading"
+          data-aos="fade-up"
+        >
           <h2 class="section-heading" id="contact-heading">Get in Touch</h2>
           <p class="contact-text">
             I'm always open to new opportunities, interesting projects, or just

@@ -16,7 +16,6 @@ FONT SIZE SYSTEM (rem)
   --color-text-main: #adb5bd;
   --color-text-emphasis: #fff;
   --color-accent: #22b8cf;
-
   --header-height: 4.5rem;
 }
 
@@ -67,7 +66,7 @@ header {
   z-index: 1000;
   padding: 0 3rem;
   height: var(--header-height);
-  border-bottom: 1px solid #343a40;
+  box-shadow: 0 18px 20px rgba(10, 25, 47, 0.7);
 }
 
 header nav {
@@ -103,6 +102,7 @@ header nav {
 .nav-list .nav-link:visited {
   color: var(--color-text-main);
   transition: color 0.2s ease;
+  letter-spacing: 0.25px;
 }
 
 .nav-list .nav-link:hover,
@@ -439,7 +439,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding-bottom: calc(4rem + var(--header-height));
   min-height: 48rem;
   height: 100%;
@@ -450,6 +450,7 @@ main {
   max-width: 40rem;
   margin-bottom: 2rem;
   line-height: 1.6;
+  text-align: center;
 }
 
 .contact-button:link,
@@ -529,14 +530,16 @@ main {
     left: 0;
     z-index: 100;
     max-height: 0;
+    padding: 0 1.5rem;
     overflow: hidden;
     flex-direction: column;
-    background: var(--color-bg);
-    padding: 0 1.5rem;
+    background: rgba(10, 25, 47, 0.8);
+    backdrop-filter: blur(10px);
   }
+
   .nav-list--open {
     padding: 1.5rem;
-    max-height: 400px; /* enough to show all links */
+    max-height: 400px;
     border-bottom: 1px solid #343a40;
   }
 

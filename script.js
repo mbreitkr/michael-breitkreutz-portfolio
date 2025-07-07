@@ -1,3 +1,17 @@
+// Animate on scroll initialization/scroll bug fix
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.addEventListener("load", () => {
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 200,
+  });
+});
+
+// Mobile nav toggle code
 const navToggle = document.querySelector(".nav-toggle");
 const navList = document.getElementById("main-nav-list");
 
