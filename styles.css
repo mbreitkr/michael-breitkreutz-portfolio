@@ -307,14 +307,6 @@ main {
   white-space: nowrap;
 }
 
-/* TODO: Remove after confirming this tech list works well on all screen sizes */
-/* .experience-tech {
-  font-size: var(--text-size-sm);
-  opacity: 0.75;
-  font-style: italic;
-  margin-bottom: 0.75rem;
-} */
-
 .experience-tech {
   display: flex;
   flex-wrap: wrap;
