@@ -71,7 +71,13 @@
       onload="this.media='all'"
     />
 
-    <!-- 8. AOS CSS  -->
+    <!-- 8. AOS CSS (including critical fallback CSS) -->
+    <style>
+      [data-aos] {
+        opacity: 0;
+        transition-property: opacity, transform;
+      }
+    </style>
     <link
       href="https://unpkg.com/aos@2.3.1/dist/aos.css"
       rel="stylesheet"
@@ -152,7 +158,12 @@
       </nav>
     </header>
     <div class="page-content">
-      <section class="hero" aria-labelledby="hero-heading" data-aos="fade-up">
+      <section
+        class="hero"
+        aria-labelledby="hero-heading"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
         <p class="hero-intro">Hey there! My name is</p>
         <h1 class="hero-name" id="hero-heading">Michael Breitkreutz.</h1>
         <h2 class="hero-tagline">

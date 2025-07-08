@@ -48,6 +48,28 @@ a {
   text-decoration: none;
 }
 
+/* Scrollbar styling */
+/* Chrome, Edge, Safari (WebKit-based) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a192f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #343a40;
+  border-radius: 6px;
+  border: 3px solid #0a192f;
+}
+
+/* Firefox (limited support) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #343a40 #0a192f;
+}
+
 /* Main styles */
 /* TODO: Clean up/consolidate files */
 .skip-link {
@@ -147,7 +169,8 @@ header nav {
 }
 
 .hero-name {
-  font-size: clamp(2.75rem, 8vw, 4.25rem);
+  /* font-size: clamp(2.75rem, 8vw, 4.25rem); */
+  font-size: clamp(2.25rem, 9vw, 4.25rem);
   font-weight: 500;
   color: var(--color-text-emphasis);
   letter-spacing: -1px;
@@ -156,7 +179,8 @@ header nav {
 
 /* TODO: Clean up tagline wording/width */
 .hero-tagline {
-  font-size: clamp(2.15rem, 7vw, 3.25rem);
+  /* font-size: clamp(2.15rem, 7vw, 3.25rem); */
+  font-size: clamp(1.75rem, 7vw, 3.25rem);
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.5px;
@@ -502,10 +526,6 @@ main {
     padding: 0 1.5rem;
   }
 
-  .page-content {
-    padding: 0 3rem;
-  }
-
   .about-body {
     flex-direction: column;
     align-items: center;
@@ -561,6 +581,17 @@ main {
 @media (max-width: 480px) {
   .page-content {
     padding: 0 1.5rem;
+  }
+
+  .hero-tagline {
+    text-wrap: wrap;
+    max-width: 100%;
+  }
+
+  @supports (text-wrap: balance) {
+    .hero-tagline {
+      text-wrap: balance;
+    }
   }
 }
 
