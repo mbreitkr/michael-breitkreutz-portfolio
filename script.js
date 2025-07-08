@@ -2,11 +2,12 @@
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
 }
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   AOS.init({
     duration: 800,
     once: true,
   });
+  AOS.refresh(); // Recalculate trigger points after full load
 });
 
 // Mobile nav toggle code
