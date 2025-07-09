@@ -47,16 +47,21 @@
       content="Portfolio preview image showing Michael's name and title"
     />
 
-    <!-- 5. Favicon & Manifest -->
+    <!-- 5. Cannonical URL -->
+    <link rel="canonical" href="https://www.mbreitkreutz.com/" />
+
+    <!-- 6. Favicon & Manifest -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- 6. Stylesheets (local first, then external) -->
+    <!-- 7. Stylesheets (local first, then external) -->
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- 7. Fonts: Preconnect, Preload, Stylesheet -->
+    <!-- 8. Fonts: Preconnect, Preload, Stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -71,7 +76,7 @@
       onload="this.media='all'"
     />
 
-    <!-- 8. AOS CSS (including critical fallback CSS) -->
+    <!-- 9. AOS CSS (including critical fallback CSS) -->
     <style>
       [data-aos] {
         opacity: 0;
@@ -85,7 +90,7 @@
       onload="this.media='all'"
     />
 
-    <!-- 9. Noscript fallback for fonts and AOS -->
+    <!-- 10. Noscript fallback for fonts and AOS -->
     <noscript>
       <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
@@ -94,7 +99,7 @@
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     </noscript>
 
-    <!-- 10. Structured Data (JSON-LD) -->
+    <!-- 11. Structured Data (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -102,6 +107,7 @@
         "name": "Michael Breitkreutz",
         "url": "https://mbreitkreutz.com",
         "image": "https://mbreitkreutz.com/assets/images/profile-headshot.jpg",
+        "logo": "https://mbreitkreutz.com/assets/images/logo.png",
         "jobTitle": "Frontend Developer",
         "description": "Frontend developer specializing in React and Angular, delivering scalable, testable, and user-friendly web applications.",
         "sameAs": [
@@ -111,7 +117,7 @@
       }
     </script>
 
-    <!-- 11. Scripts (defer/async) -->
+    <!-- 12. Scripts (defer/async) -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="script.js" defer></script>
   </head>
